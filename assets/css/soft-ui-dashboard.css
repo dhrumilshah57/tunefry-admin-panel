@@ -64,6 +64,11 @@ hr {
   opacity: 0.25;
 }
 
+.required:after {
+  content: " *";
+  color: red;
+}
+
 hr:not([size]) {
   height: 1px;
 }
@@ -24924,6 +24929,14 @@ pre[class*="language-"] {
   .ps {
     overflow: auto !important;
   }
+}
+
+.card-hover :hover {
+  background: #e293d3;
+  border-radius: 1rem;
+  color: white;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
