@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const deleteButton = document.createElement('button');
         deleteButton.type = 'button';
         deleteButton.textContent = 'Delete';
+        deleteButton.className = 'btn btn-primary';
 
         // Event listener to delete the input field when the "Delete" button is clicked
         deleteButton.addEventListener('click', function () {
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const deleteButton = document.createElement('button');
         deleteButton.type = 'button';
         deleteButton.textContent = 'Delete';
+        deleteButton.className = 'btn btn-primary';
 
         // Event listener to delete the input field when the "Delete" button is clicked
         deleteButton.addEventListener('click', function () {
@@ -71,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const deleteButton = document.createElement('button');
         deleteButton.type = 'button';
         deleteButton.textContent = 'Delete';
+        deleteButton.className = 'btn btn-primary';
 
         // Event listener to delete the input field when the "Delete" button is clicked
         deleteButton.addEventListener('click', function () {

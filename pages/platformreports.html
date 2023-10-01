@@ -34,6 +34,55 @@
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.colVis.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/javascript"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#datatable").dataTable(
+                {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                }
+            );
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#datatable2").dataTable(
+                {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                }
+            );
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#datatable3").dataTable(
+                {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                }
+            );
+        });
+    </script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -115,12 +164,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/platformreports.html">
+                    <a class="nav-link  active" href="../pages/platformreports.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <path
-                                    d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm128-64V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32zM480 96V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF"
+                                        fill-rule="nonzero">
+                                        <g transform="translate(1716.000000, 291.000000)">
+                                            <g transform="translate(0.000000, 148.000000)">
+                                                <path
+                                                    d="M32 32c17.7 0 32 14.3 32 32V400c0 8.8 7.2 16 16 16H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H80c-44.2 0-80-35.8-80-80V64C0 46.3 14.3 32 32 32zM160 224c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32V256c0-17.7 14.3-32 32-32zm128-64V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V160c0-17.7 14.3-32 32-32s32 14.3 32 32zm64 32c17.7 0 32 14.3 32 32v96c0 17.7-14.3 32-32 32s-32-14.3-32-32V224c0-17.7 14.3-32 32-32zM480 96V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V96c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Platform Reports</span>
@@ -143,13 +201,16 @@
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+
                                 <path
                                     d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
+
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Wallet</span>
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link  " href="../pages/paymentpaidinfo.html">
                         <div
@@ -235,7 +296,6 @@
                         <span class="nav-link-text ms-1">FAQ</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link  " href="../pages/contact.html">
                         <div
@@ -248,30 +308,18 @@
                         <span class="nav-link-text ms-1">Contact Information</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
-                    <a class="nav-link  active" href="../pages/live-timings.html">
+                    <a class="nav-link  " href="../pages/live-timings.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g transform="translate(-1869.000000, -293.000000)" fill="#FFFFFF"
-                                        fill-rule="nonzero">
-                                        <g transform="translate(1716.000000, 291.000000)">
-                                            <g id="office" transform="translate(153.000000, 2.000000)">
-                                                <path
-                                                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
-                                                \
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
+                                <path
+                                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Song Live </br>Timing on </br>DSPs</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link  " href="../pages/callback-request.html">
                         <div
@@ -309,10 +357,9 @@
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
                         <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a>
                         </li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Song Live timings on
-                            DSPs</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Reports</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">Song Live timings on DSPs</h6>
+                    <h6 class="font-weight-bolder mb-0">Platform Reports</h6>
                 </nav>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -329,58 +376,170 @@
         </nav>
         <!-- End Navbar -->
         <div class="container-fluid py-4">
-            <div class="row">
-                <div class="col-12">
-                    <!-- <div class="card mb-4">
-                        <div class="card-header pb-0">
-                            <h6>Notifications table</h6>
-                        </div> -->
-                    <div class="card p-5">
-                        <h4>Song Live timings on DSPs</h4>
-                        <p style="font-weight: bold; padding-top: 10px; word-break: break-word;">Estimated time
-                            taken by various platforms to make the song available in normal condition</p>
-                        <p>(Please raise complain only after these days or on the last day)</p>
-                        <ul>
-                            <li style="padding-top: 10px; word-break: break-word;">Wynk Music: within 24 working
-                                hours after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Gaana: within 24 working hours
-                                after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Resso: within 24 working hours
-                                after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Instagram: within 24 working
-                                hours after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Facebook: within 24 working hours
-                                after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Spotify: 24 hours to 48 working
-                                hours after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Apple and iTunes: within 24
-                                working hours after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Pandora and Deezer: within 24
-                                working hours after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">TIDAL: within 24 working hours
-                                after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">CallerTunes: 2-5 working days
-                                after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">JioSaavn: 1-4 working days after
-                                the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">YouTube Content ID: within 10
-                                working days after the song approval status (Approved).</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Working days: (Monday to Friday.
-                                Saturday and Sunday are not counted as working days.</li>
-                            <li style="padding-top: 10px; word-break: break-word;">By the way MusicNote works on Sat
-                                and Sun in limited capacity.</li>
-                            <li style="padding-top: 10px; word-break: break-word;">Do you know: You can upload the
-                                song in advance also and set the release date upto 15 days in advance.</li>
-                            **these timings are based on the
-                            TAT provided by the streaming apps and based on our delivery experience.</li>
-                        </ul>
-                    </div>
-                    <!-- </div> -->
+            <div class="card mt-4">
+                <div class="container-fluid py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Royalty Reports - Section 3</h4>
+                            <div class="table-container">
+                                <table id="datatable" class="table table-striped table-bordered">
 
+                                    <thead>
+
+                                        <tr>
+
+                                            <th style="word-break: break-word;">Month</th>
+                                            <th>Platform</th>
+                                            <th>Country</th>
+                                            <th>Product</th>
+                                            <th>Song Name</th>
+                                            <th>Album Name</th>
+                                            <th>Artist Name</th>
+                                            <th>isrc</th>
+                                            <th>label</th>
+                                            <th>total stream</th>
+                                            <th>Royalty (INR)</th>
+                                            <th>user ID</th>
+                                            <th>report ID</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>June</td>
+                                            <td>Spotify</td>
+                                            <td>Test</td>
+                                            <td>song</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>Test</td>
+                                            <td>test type</td>
+                                            <td>2011/04/25</td>
+                                            <td>10,000</td>
+                                            <td>11</td>
+                                            <td>11</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
+        <div class="container-fluid py-4">
+            <div class="card mt-4">
+                <div class="container-fluid py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Royalty Reports</h4>
+                            <div class="table-container">
+                                <table id="datatable2" class="table table-striped table-bordered">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th style="word-break: break-word;">Month</th>
+                                            <th>Platform</th>
+                                            <th>Product</th>
+                                            <th>Song Name</th>
+                                            <th>Album Name</th>
+                                            <th>Artist Name</th>
+                                            <th>isrc</th>
+                                            <th>label</th>
+                                            <th>total stream</th>
+                                            <th>Royalty (INR)</th>
+                                            <th>user ID</th>
+                                            <th>report ID</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>June</td>
+                                            <td>Spotify</td>
+                                            <td>song</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>Test</td>
+                                            <td>test type</td>
+                                            <td>2011/04/25</td>
+                                            <td>10,000</td>
+                                            <td>11</td>
+                                            <td>11</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid py-4">
+            <div class="card mt-4">
+                <div class="container-fluid py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Royalty Reports - Section 1</h4>
+                            <div class="table-container">
+                                <table id="datatable3" class="table table-striped table-bordered">
+
+                                    <thead>
+
+                                        <tr>
+
+                                            <th style="word-break: break-word;">Month</th>
+                                            <th>Platform</th>
+                                            <th>Product</th>
+                                            <th>Song Name</th>
+                                            <th>Album Name</th>
+                                            <th>Artist Name</th>
+                                            <th>isrc</th>
+                                            <th>label</th>
+                                            <th>total stream</th>
+                                            <th>Royalty (INR)</th>
+                                            <th>user ID</th>
+                                            <th>report ID</th>
+                                        </tr>
+
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>June</td>
+                                            <td>Spotify</td>
+                                            <td>song</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>test</td>
+                                            <td>Test</td>
+                                            <td>test type</td>
+                                            <td>2011/04/25</td>
+                                            <td>10,000</td>
+                                            <td>11</td>
+                                            <td>11</td>
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!--   Core JS Files   -->

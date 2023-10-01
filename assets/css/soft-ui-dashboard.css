@@ -3580,16 +3580,16 @@ fieldset:disabled .btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #ad0a87;
-  border-color: #a20a7f;
+  background-color: #FF7218;
+  border-color: #FF7218;
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
   color: #fff;
-  background-color: #ad0a87;
-  border-color: #a20a7f;
-  box-shadow: 0 0 0 0.2rem rgba(211, 48, 173, 0.5);
+  background-color: #FF7218;
+  border-color: #FF7218;
+  box-shadow: 0 0 0 0.2rem rgba(244, 99, 50, 0.5);
 }
 
 .btn-check:checked+.btn-primary,
@@ -3598,8 +3598,8 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #a20a7f;
-  border-color: #980977;
+  background-color: #FF7218;
+  border-color: #FF7218;
 }
 
 .btn-check:checked+.btn-primary:focus,
@@ -3607,14 +3607,14 @@ fieldset:disabled .btn {
 .btn-primary:active:focus,
 .btn-primary.active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem rgba(211, 48, 173, 0.5);
+  box-shadow: 0 0 0 0.2rem rgb(244, 99, 50);
 }
 
 .btn-primary:disabled,
 .btn-primary.disabled {
   color: #fff;
-  background-color: #cb0c9f;
-  border-color: #cb0c9f;
+  background-color: #FF7218;
+  border-color: #FF7218;
 }
 
 .btn-secondary {
@@ -18932,13 +18932,13 @@ fieldset:disabled .btn {
 
 .btn-primary:hover,
 .btn.bg-gradient-primary:hover {
-  background-color: #cb0c9f;
-  border-color: #cb0c9f;
+  background-color: #FF7218;
+  border-color: #FF7218;
 }
 
 .btn-primary .btn.bg-outline-primary,
 .btn.bg-gradient-primary .btn.bg-outline-primary {
-  border: 1px solid #cb0c9f;
+  border: 1px solid #FF7218;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -18947,8 +18947,8 @@ fieldset:disabled .btn {
 .btn.bg-gradient-primary:not(:disabled):not(.disabled).active,
 .btn.bg-gradient-primary:not(:disabled):not(.disabled):active,
 .show>.btn.bg-gradient-primary.dropdown-toggle {
-  color: color-yiq(#cb0c9f);
-  background-color: #cb0c9f;
+  color: color-yiq(#FF7218);
+  background-color: #FF7218;
 }
 
 .btn-primary.focus,
