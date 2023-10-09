@@ -34,31 +34,6 @@
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet"> -->
-    <link href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.colVis.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js" type="text/javascript"></script>
-    <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js" type="text/javascript"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#datatable").dataTable(
-                {
-                    dom: 'Bfrtip',
-                    buttons: [
-                        'copy', 'csv', 'excel', 'pdf', 'print'
-                    ]
-                }
-            );
-        });
-    </script>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -116,29 +91,27 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/newrelease.html">
+                    <a class="nav-link  active" href="../pages/newrelease.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <path
-                                    d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF"
+                                        fill-rule="nonzero">
+                                        <g transform="translate(1716.000000, 291.000000)">
+                                            <g transform="translate(0.000000, 148.000000)">
+                                                <path
+                                                    d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Submit New </br>Release</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link  " href="../pages/updates.html">
-                      <div
-                        class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                          <path
-                            d="M288 109.3V352c0 17.7-14.3 32-32 32s-32-14.3-32-32V109.3l-73.4 73.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l128-128c12.5-12.5 32.8-12.5 45.3 0l128 128c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L288 109.3zM64 352H192c0 35.3 28.7 64 64 64s64-28.7 64-64H448c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V416c0-35.3 28.7-64 64-64zM432 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z" />
-                        </svg>
-                      </div>
-                      <span class="nav-link-text ms-1">Update your </br>Releases</span>
-                    </a>
-                  </li>
+
                 <li class="nav-item">
                     <a class="nav-link  " href="../pages/myrelease.html">
                         <div
@@ -176,27 +149,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  active" href="../pages/wallet.html">
+                    <a class="nav-link  " href="../pages/wallet.html">
                         <div
                             class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF"
-                                        fill-rule="nonzero">
-                                        <g transform="translate(1716.000000, 291.000000)">
-                                            <g transform="translate(0.000000, 148.000000)">
-                                                <path
-                                                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
+                                <path
+                                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192c0-35.3-28.7-64-64-64H80c-8.8 0-16-7.2-16-16s7.2-16 16-16H448c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM416 272a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
                             </svg>
                         </div>
                         <span class="nav-link-text ms-1">Wallet</span>
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link  " href="../pages/paymentpaidinfo.html">
                         <div
@@ -341,11 +304,11 @@
             <div class="container-fluid py-1 px-3">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a>
+                        <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Update</a>
                         </li>
-                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Wallet</li>
+                        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Update Form</li>
                     </ol>
-                    <h6 class="font-weight-bolder mb-0">My Transactions</h6>
+                    <h6 class="font-weight-bolder mb-0">Update</h6>
                 </nav>
                 <ul class="navbar-nav  justify-content-end">
                     <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -362,54 +325,329 @@
         </nav>
         <!-- End Navbar -->
         <div class="container-fluid py-4">
-            <div class="card mt-4">
-                <div class="container-fluid py-4">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="table-container">
-                                <table id="datatable" class="table table-striped table-bordered">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card mb-4">
+                        <div class="row p-5">
+                            <div class="card-body">
+                                <h4 class="card-title">Update Your Releases </h4>
+                                <p class="card-description">
+                                    Note: Saturday & Sunday is Holiday.
+                                </p>
+                                <p class="card-description">
+                                    Read Guidelines Before Uploading.
+                                </p>
+                                <h4 class="card-title" style="padding-top: 20px;">RELEASE DETAILS</h4>
+                                <hr>
+                                <form class="forms-sample">
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <label class="col-form-label">Explicit</label>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input"
+                                                                name="explicitOption" value="yes" id="explicitYes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input"
+                                                                name="explicitOption" value="no" id="explicitNo">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="song" class="required col-form-label">Song</label>
+                                        <input type="text" class="form-control" id="song" required>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Song Title,
+                                        </p>
+                                    </div>
 
-                                    <thead>
-
-                                        <tr>
-
-                                            <th style="word-break: break-word;">ID</th>
-
-                                            <th>Reference</th>
-
-                                            <th>Amount</th>
-
-                                            <th>Type</th>
-
-                                            <th>Date</th>
-
-                                        </tr>
-
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-
-                                            <td>1234</td>
-
-                                            <td>Test Name</td>
-
-                                            <td>10,000</td>
-                                            <td>test type</td>
-
-                                            <td>2011/04/25</td>
 
 
+                                    <!-- <button type="button" id="addInputField">Add Input Field</button> -->
+
+                                    <div class="form-group">
+                                        <div id="artistFields">
+                                            <div class="form-group">
+                                                <label for="artist" class="required col-form-label">Artist1 /
+                                                    Singer</label>
+                                                <input type="text" class="form-control" id="artist" name="artist[]"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addArtist" class="btn btn-primary">Add Artist</button>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            if more than one then click plus (+) sign.
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="composerFields">
+                                            <div class="form-group">
+                                                <label for="composer" class="required col-form-label">Composer</label>
+                                                <input type="text" class="form-control" id="composer" name="composer[]"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addComposer" class="btn btn-primary">Add
+                                            Composer</button>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Music Director/Music Arranger/Music Composer. If more than one,
+                                            click the plus (+) sign.
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="lyricistFields">
+                                            <div class="form-group">
+                                                <label for="lyricist" class="required col-form-label">Lyricist</label>
+                                                <input type="text" class="form-control" id="lyricist" name="lyricist[]"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <button type="button" id="addLyricist" class="btn btn-primary">Add
+                                            Lyricist</button>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Lyricist/Author. if more than one then click plus (+) sign.
+                                        </p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="genre" class="required col-form-label">Genre/ Category</label>
+                                        <select class="js-example-basic-single w-100" id="genre" required>
+                                            <option value="">Select Genre/ Category</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="AM">America</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="RU">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="sub-category" class="required col-form-label">Sub Category</label>
+                                        <select class="js-example-basic-single w-100" id="sub-category" required>
+                                            <option value="">Select Sub Category</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="AM">America</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="RU">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="language" class="required col-form-label">Language</label>
+                                        <select class="js-example-basic-single w-100" id="language" required>
+                                            <option value="">Select Language</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="AM">America</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="RU">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="mood" class="required col-form-label">Mood</label>
+                                        <select class="js-example-basic-single w-100" id="mood" required>
+                                            <option value="">Select Mood</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="AM">America</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="RU">Russia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="release-date" class="required col-form-label">Date Of Music
+                                            Release</label>
+                                        <div>
+                                            <input type="date" class="form-control" id="release-date">
+                                        </div>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Original release date if already released before.
+                                        </p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="live-date" class="required col-form-label">Go Live Date</label>
+                                        <div>
+                                            <input type="date" class="form-control" id="live-date">
+                                        </div>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            The date on which you want to be on platforms. Maximum upto 15 Days.
+                                        </p>
+                                    </div>
+
+                                    <h4 class="card-title" style="padding-top: 20px;">FILES</h4>
+                                    <hr>
+
+                                    <div class="form-group">
+                                        <label for="mood" class="required col-form-label">Artwork/Cover Art</label>
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <input type="text" class="form-control file-upload-info" disabled
+                                                placeholder="Upload Image">
+                                            <span class="input-group-append">
+                                                <button class="file-upload-browse btn btn-primary"
+                                                    type="button">Upload</button>
+                                            </span>
+                                        </div>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Accepted file types: jpg, png, jpeg, Max. file size: 50 MB, Max. files:
+                                            1.
+                                        </p>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="mood" class="required col-form-label">Audio File</label>
+                                        <input type="file" name="img[]" class="file-upload-default">
+                                        <div class="input-group col-xs-12">
+                                            <input type="text" class="form-control file-upload-info" disabled
+                                                placeholder="Upload Image">
+                                            <span class="input-group-append">
+                                                <button class="file-upload-browse btn btn-primary"
+                                                    type="button">Upload</button>
+                                            </span>
+                                        </div>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Accepted file types: wav, mp3, Max. file size: 256 MB, Max. files: 1.
+                                        </p>
+                                    </div>
 
 
-                                        </tr>
+                                    <h4 class="card-title" style="padding-top: 20px;">CALLERTUNE DETAILS</h4>
+                                    <hr>
 
-                                    </tbody>
-
-                                </table>
+                                    <div class="form-group">
+                                        <label for="cuts" class="required col-form-label">CRBT Cuts</label>
+                                        <input type="text" class="form-control" id="cuts" required>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            0 of 16 max characters
+                                        </p>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Name of CallerTune cut (it should be the first three words of lyrics of
+                                            the callertune)
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cuts" class="required col-form-label">CRBT Cuts</label>
+                                        <input type="text" class="form-control" id="cuts" required
+                                            placeholder="00:00:00">
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Callertune Time, start callertune timing in hour:min:sec (00:00:00) |
+                                            make sure it remains under the full song length.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class=" col-form-label required">Do you want Youtube
+                                                Content ID?</label>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="idOption"
+                                                                value="yes" id="idYes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="idOption"
+                                                                value="no" id="idNo">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="label" class="required col-form-label">Label</label>
+                                        <select class="js-example-basic-single w-100" id="label" required>
+                                            <option value="">Select Label</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                            <option value="AM">America</option>
+                                            <option value="CA">Canada</option>
+                                            <option value="RU">Russia</option>
+                                        </select>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Label Name
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message col-form-label">Message to Admin (Optional)</label>
+                                        <textarea class="form-control" id="message" rows="4"></textarea>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            0 of 100 max characters
+                                        </p>
+                                        <p class="card-description" style="padding-top: 10px;">
+                                            Request, Instruction etc.
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="consent" class="required col-form-label">Consent</label>
+                                        <div class="form-check mx-sm-2">
+                                            <label class="form-check-label" for="consent">
+                                                <input type="checkbox" class="form-check-input" id="consent">
+                                                You agreed to the Content Delivery Guidelines
+                                            </label>
+                                        </div>
+                                        <textarea
+                                            style="height: 115px; width: 100%; word-break:break-word; white-space: normal;"
+                                            disabled>
+                                                                        You hereby declared that Tunefry has full rights to modify artwork or album/song metadata details based on the content Delivery guidelines. 
+                                                                        You warrant, agree and undertake both on behalf of yourself that the Works are original to you and have not been copied from any third party; the Works do not infringe any copyright, trademark or other proprietary or intellectual property rights of any third party or include any material which are defamatory of any party or obscene.
+                                                                    </textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="consent-revenue" class="required col-form-label">Consent (Revenue
+                                            Share)</label>
+                                        <div class="form-check mx-sm-2">
+                                            <label class="form-check-label" for="consent-revenue">
+                                                <input type="checkbox" class="form-check-input" id="consent-revenue">
+                                                You agreed to the Revenue Share Between Us
+                                            </label>
+                                        </div>
+                                        <textarea class="w-100" style="white-space: nowrap;" disabled>
+                                                                    You agreed to the revenue share between you and us is 80/20. 80% is yours and 20% is for us (net revenue received fromDSP/Partner).
+                                                                    </textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="agreement" class="required col-form-label">Terms and
+                                            Conditions/Agreement</label>
+                                        <div class="form-check mx-sm-2">
+                                            <label class="form-check-label" for="agreement">
+                                                <input type="checkbox" class="form-check-input" id="agreement">
+                                                I have read and agree to the Terms and Conditions
+                                            </label>
+                                        </div>
+                                        <textarea class="w-100" style="white-space: nowrap;" disabled>
+                                                                            Click Here to read the Terms and Conditions
+                                                                    </textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                    <!-- <button class="btn btn-light">Cancel</button> -->
+                                </form>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -417,6 +655,7 @@
     </main>
 
     <!--   Core JS Files   -->
+    <script src="../scripts/script.js"></script>
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>
     <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
