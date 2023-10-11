@@ -59,6 +59,29 @@
             );
         });
     </script>
+    <style>
+            .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .advertisement {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+    </style>
+    
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -77,7 +100,7 @@
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100 h-75" id="sidenav-collapse-main">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="../pages/dashboard.html">
+          <a class="nav-link " href="../pages/dashboard.html">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +163,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="../pages/advertisment_management_system.html">
+          <a class="nav-link  active" href="../pages/advertisment_management_system.html">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
@@ -224,7 +247,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  active" href="../pages/wallet.html">
+          <a class="nav-link  " href="../pages/wallet.html">
             <div
               class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
               <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
@@ -544,9 +567,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Wallet</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Advertisement Management</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Wallet</h6>
+          <h6 class="font-weight-bolder mb-0">Advertisement</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -576,114 +599,155 @@
         </ul>
       </div>
     </nav>
+        <!-- End Navbar -->
+        
+        <div class="container">
+            <h1>Advertisement Management System</h1>
     
-    <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
-        <!-- Navbar -->
-        <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-        navbar-scroll="true">
-        <div class="container-fluid py-1 px-3">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li>
-              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Wallet</li>
-            </ol>
-            <h6 class="font-weight-bolder mb-0">Wallet</h6>
-          </nav>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            
+            <h2 style="font-size: 2rem;">Create Advertisement</h2>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#createAdvertisementModal">Create Advertisement</button>
+    
+            <h2>Advertisements</h2>
+            <div id="advertisementList">
+                <!-- Advertisements will be displayed here -->
             </div>
-            <ul class="navbar-nav  justify-content-end">
-  
-            <li class="nav-item d-flex align-items-center">
-            <a href="sign-in.html" class="nav-link text-body font-weight-bold px-0">
-            <i class="fa fa-user me-sm-1" aria-hidden="true"></i>
-            <span class="d-sm-inline d-none">Sign In</span>
-            </a>
-            </li>
-      </ul>
-      </div>
-      </div>
-          <ul class="navbar-nav  justify-content-end">
-            <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                </div>
-              </a>
-            </li>
-          </ul>
         </div>
-      </nav>
-      
-            <div class="container">
-                <div class="wallet">
-                    <h1 class="wallet-header">Payment Wallet</h1>
-                    <div class="balance">
-                        Balance: $<span id="balance">100.00</span>
+    
+        <!-- Create Advertisement Modal -->
+        <div class="modal fade" id="createAdvertisementModal" tabindex="-1" role="dialog" aria-labelledby="createAdvertisementModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createAdvertisementModalLabel">Create Advertisement</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="transaction">
-                        <input type="number" id="amount" class="transaction-input" placeholder="Enter amount">
-                        <button onclick="addFunds()" class="btn btn-primary">Add Funds</button>
-                        <button onclick="makePayment()" class="btn btn-success">Make Payment</button>
+                    <div class="modal-body">
+                        <form id="createAdvertisementForm">
+                            <div class="form-group">
+                                <label for="title">Title:</label>
+                                <input type="text" id="title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="content">Content:</label>
+                                <textarea id="content" class="form-control" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" form="createAdvertisementForm" class="btn btn-primary">Create</button>
                     </div>
                 </div>
             </div>
-        
-            <script>
-                let balance = 100.00;
-        
-                function updateBalance() {
-                    document.getElementById("balance").textContent = balance.toFixed(2);
+        </div>
+    
+        <!-- Edit Advertisement Modal -->
+        <div class="modal fade" id="editAdvertisementModal" tabindex="-1" role="dialog" aria-labelledby="editAdvertisementModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editAdvertisementModalLabel">Edit Advertisement</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editAdvertisementForm">
+                            <input type="hidden" id="editIndex" value="">
+                            <div class="form-group">
+                                <label for="editTitle">Title:</label>
+                                <input type="text" id="editTitle" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editContent">Content:</label>
+                                <textarea id="editContent" class="form-control" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" form="editAdvertisementForm" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            // Dummy data to simulate advertisements
+            const advertisements = [];
+    
+            // Function to display advertisements
+            function displayAdvertisements() {
+                const list = document.getElementById('advertisementList');
+                list.innerHTML = '';
+    
+                advertisements.forEach((ad, index) => {
+                    const div = document.createElement('div');
+                    div.classList.add('advertisement');
+                    div.innerHTML = `
+                        <h3>${ad.title}</h3>
+                        <p>${ad.content}</p>
+                        <button class="btn btn-danger" onclick="deleteAdvertisement(${index})">Delete</button>
+                        <button class="btn btn-info" data-toggle="modal" data-target="#editAdvertisementModal" onclick="editAdvertisement(${index})">Edit</button>
+                    `;
+                    list.appendChild(div);
+                });
+            }
+    
+            // Function to create a new advertisement
+            document.getElementById('createAdvertisementForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const title = document.getElementById('title').value;
+                const content = document.getElementById('content').value;
+    
+                if (title && content) {
+                    advertisements.push({ title, content });
+                    displayAdvertisements();
+                    document.getElementById('title').value = '';
+                    document.getElementById('content').value = '';
+                    $('#createAdvertisementModal').modal('hide');
                 }
-        
-                function animateBalanceChange(amount) {
-                    const balanceElement = document.getElementById("balance");
-                    let currentBalance = parseFloat(balanceElement.textContent);
-                    let step = amount > 0 ? 0.1 : -0.1;
-        
-                    function update() {
-                        currentBalance += step;
-                        balanceElement.textContent = currentBalance.toFixed(2);
-                        if ((amount > 0 && currentBalance < balance) || (amount < 0 && currentBalance > balance)) {
-                            requestAnimationFrame(update);
-                        }
-                    }
-        
-                    update();
+            });
+    
+            // Function to edit an advertisement
+            function editAdvertisement(index) {
+                document.getElementById('editTitle').value = advertisements[index].title;
+                document.getElementById('editContent').value = advertisements[index].content;
+                document.getElementById('editIndex').value = index;
+            }
+    
+            // Function to save changes to an edited advertisement
+            document.getElementById('editAdvertisementForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const title = document.getElementById('editTitle').value;
+                const content = document.getElementById('editContent').value;
+                const editIndex = document.getElementById('editIndex').value;
+    
+                if (title && content && editIndex !== '') {
+                    advertisements[editIndex].title = title;
+                    advertisements[editIndex].content = content;
+                    displayAdvertisements();
+                    $('#editAdvertisementModal').modal('hide');
                 }
-        
-                function addFunds() {
-                    const amount = parseFloat(document.getElementById("amount").value);
-                    if (isNaN(amount) || amount <= 0) {
-                        alert("Please enter a valid amount.");
-                        return;
-                    }
-                    balance += amount;
-                    animateBalanceChange(amount);
-                    alert(`Added $${amount.toFixed(2)} to your wallet.`);
-                }
-        
-                function makePayment() {
-                    const amount = parseFloat(document.getElementById("amount").value);
-                    if (isNaN(amount) || amount <= 0) {
-                        alert("Please enter a valid amount.");
-                        return;
-                    }
-                    if (amount > balance) {
-                        alert("Insufficient balance.");
-                        return;
-                    }
-                    balance -= amount;
-                    animateBalanceChange(-amount);
-                    alert(`Payment of $${amount.toFixed(2)} made successfully.`);
-                }
-        
-                updateBalance();
-            </script>
-        
+            });
+    
+            // Function to delete an advertisement
+            function deleteAdvertisement(index) {
+                advertisements.splice(index, 1);
+                displayAdvertisements();
+            }
+    
+            // Initial display of advertisements
+            displayAdvertisements();
+        </script>
+        <!-- Include Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+       
         
     </main>
 
